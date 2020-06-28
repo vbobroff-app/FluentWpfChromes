@@ -2,14 +2,10 @@
 ![chromes](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/chromes.png)
 
 ## Content
-* **[AcrylicChrome](#acrylicchrome)**
-  <div>Sets the acrylic effect for the custom WPF window according to the Flurnt Design concept. You can set an additional understratum color to shade the acrylic.
-  </div>  
+* **[AcrylicChrome](#acrylicchrome)** - sets the acrylic effect for the custom WPF window according to the Flurnt Design concept. You can set an additional understratum color to shade the acrylic.
   
-* **[AeroglassChrome](#aeroglasschrome)**
-  <div>Sets the blur effect for a custom WPF window.</div>
-* **[TransparentChrome](#transparentchrome)**
-  <div>Tunes native transparency.</div>
+* **[AeroglassChrome](#aeroglasschrome)** - sets the blur effect for a custom WPF window.
+* **[TransparentChrome](#transparentchrome)** - tunes native transparency.
   
 ## Install
 *CLI  Nuget Pack command*
@@ -19,7 +15,7 @@ Install-Package FluentWPFChromes
 https://nuget.org/packages/FluentWpfChromes
 
 ## Preparation
-In MainWindow.xaml file, add the FluentWpfChromes namespace, set WindowStyle = none, set Background settings with the necessary transparency.
+In MainWindow.xaml file, add the FluentWpfChromes namespace, set WindowStyle = none, set Background brush the necessary transparency.
 ```
 xmlns:f="clr-namespace:FluentWpfChromes;assembly=FluentWpfChromes"
  
@@ -33,8 +29,7 @@ On this page:
 In the MainWindow.xaml file, add the code fragment, which is the Attached Property attribute with the corresponding chrome class AcrylicChrome, AeroGlassChrome or TransparentChrome. For the availability of other components during HitTest, it is necessary to specify the attached property IsHitTestVisibleInChrome = "True" in the componenet body tag.
 
 # AcrylicChrome
-
-<img src="./images/acrylic_chrome.png" width="61%"/><br />
+![acrylic](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/acrylic_chrome.png)
 
 Add the code fragment to MainWindow.xaml
 ```xml
