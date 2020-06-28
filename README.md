@@ -1,3 +1,4 @@
+[![NuGet](https://img.shields.io/nuget/v/FluentWpfChromes.svg)](https://www.nuget.org/packages/FluentWpfChromes)
 # FluentWpfChromes
 ![chromes](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/chromes.png)
 
