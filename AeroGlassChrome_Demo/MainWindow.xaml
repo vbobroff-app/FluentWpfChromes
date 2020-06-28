@@ -1,0 +1,123 @@
+﻿<Window x:Class="AeroGlassChrome_Demo.MainWindow" x:Name="AeroGlassWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:f="clr-namespace:FluentWpfChromes;assembly=FluentWpfChromes"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Hello Blur!" 
+        Height="550" Width="450"
+        WindowStyle="None"
+        Background="#8000030A"
+        MouseDoubleClick="MainWindow_OnMouseDoubleClick">
+
+    <Window.Resources>
+        <ResourceDictionary>
+
+            <!-- get static instance System.Windows.Media.Colors-->
+            <ObjectDataProvider MethodName="GetType" 
+                                ObjectType="{x:Type system:Type}" x:Key="colorsTypeOdp">
+                <ObjectDataProvider.MethodParameters>
+                    <system:String>System.Windows.Media.Colors, PresentationCore,
+                        Version=3.0.0.0, Culture=neutral, 
+                        PublicKeyToken=31bf3856ad364e35</system:String>
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+            <!-- get Color properties -->
+            <ObjectDataProvider ObjectInstance="{StaticResource colorsTypeOdp}"  
+                                MethodName="GetProperties" x:Key="colorPropertiesOdp">
+            </ObjectDataProvider>
+
+            <!-- Style example implementation-->
+            <Style TargetType="{x:Type Window}" x:Key="WindowStyle">
+                <Setter Property="Background" Value="#7F5F4545"/>
+                <Setter Property="BorderBrush" Value="Gray"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Foreground" Value="White"/>
+
+
+                <Setter Property="WindowStyle" Value="None" />
+
+
+                <Setter Property="f:AeroGlassChrome.AeroGlassChrome">
+                    <Setter.Value>
+                        <f:AeroGlassChrome />
+                    </Setter.Value>
+                </Setter>
+
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Window}">
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    
+                ClipToBounds="True"
+                                    >
+                                <Grid>
+                                    <AdornerDecorator >
+                                        <ContentPresenter/>
+                                    </AdornerDecorator>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <f:AeroGlassChrome.AeroGlassChrome>
+        <f:AeroGlassChrome/>
+    </f:AeroGlassChrome.AeroGlassChrome>
+
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" f:AeroGlassChrome.IsHitTestVisibleInChrome="True">
+            <Separator Height="120"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="64" Foreground="White" TextAlignment="Center">
+              Blur 
+            </TextBlock>
+            <Separator Height="160"/>
+            <Label Foreground="White" HorizontalAlignment="Center">Understratum color:</Label>
+            <!-- Combobox set AeroGlassChrome.UnderStratumColor property, under Background-->
+            <ComboBox  VerticalAlignment="Center" HorizontalAlignment="Center" Height="26" Width="150"
+                       f:AeroGlassChrome.IsHitTestVisibleInChrome="False"
+                       ItemsSource="{Binding Source={StaticResource colorPropertiesOdp}}" 
+                       SelectedValuePath="Name"     
+                       SelectedValue="{Binding ElementName=AeroGlassWindow, Path=(f:AeroGlassChrome.AeroGlassChrome).UnderStratumColor, Mode=OneWayToSource}"
+                       SelectedIndex="7"
+                       >
+
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Width="20" Height="20" Margin="5" 
+
+                                       Background="{Binding Name}"/>
+                            <TextBlock  Text="{Binding Name}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+
+            </ComboBox>
+
+            <Label Foreground="White">Opacity:</Label>
+
+            <!-- Slider tunes AeroGlassChrome.DependencyOpacity property-->
+            <Slider x:Name="OpacitySlider" 
+                    f:AeroGlassChrome.IsHitTestVisibleInChrome="False"
+                    Maximum="255" Interval="15" TickPlacement="BottomRight" TickFrequency="15" 
+                    IsSnapToTickEnabled="True" Margin="2,0,-2,0"
+                    Value="{Binding ElementName=AeroGlassWindow, Path=(f:AeroGlassChrome.AeroGlassChrome).DependencyOpacity, Mode=TwoWay}" 
+                    />
+
+            <Rectangle Height="40" />
+            <TextBlock FontSize="10" Foreground="LightGray" TextAlignment="Center"><Run Text="DoubleClick to disable Blur Effect"/><LineBreak/></TextBlock>
+        </StackPanel>
+
+    </Grid>
+
+</Window>

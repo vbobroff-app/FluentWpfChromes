@@ -1,0 +1,33 @@
+﻿<Window x:Class="TransparentChrome_Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransparentChrome_Demo"
+        xmlns:f="clr-namespace:FluentWpfChromes;assembly=FluentWpfChromes"
+        mc:Ignorable="d"
+        Title="Hello Blur!" 
+        Height="550" Width="450"
+        WindowStyle="None"
+        Background="#66000714"
+        AllowsTransparency="True">
+
+    <f:TransparentChrome.TransparentChrome>
+        <f:TransparentChrome/>
+    </f:TransparentChrome.TransparentChrome>
+
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" f:AeroGlassChrome.IsHitTestVisibleInChrome="True">
+            <Separator Height="120"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="64" Foreground="White" TextAlignment="Center">
+             Transparent
+            <LineBreak/>
+        </TextBlock>
+            <Separator Height="120"/>
+            <Rectangle Height="60" />
+            <TextBlock FontSize="10" Foreground="LightGray" TextAlignment="Center"><Run Text="Drag from the header area and resize"/><LineBreak/></TextBlock>
+            
+        </StackPanel>
+    </Grid>
+</Window>
+
