@@ -22,7 +22,6 @@ xmlns:f="clr-namespace:FluentWpfChromes;assembly=FluentWpfChromes"
  
 WindowStyle="None"
 Background="#1946455F"
-On this page:
 ```
 
 ## Usage
