@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/vbobroff-app/FluentWpfChromes</projectUrl>
+    <description>$description$</description>
+    <releaseNotes>Start version of the package.</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>wpf vhromes wpfchromes fluentwpfchromes vbobroff vbobrov</tags>
+    <icon>images\icon.png</icon>
+    <frameworkAssemblies>
+            <frameworkAssembly assemblyName="PresentationCore" targetFramework=".NETFramework4.7.2"/>
+            <frameworkAssembly assemblyName="PresentationFramework" targetFramework=".NETFramework4.7.2"/>
+            <frameworkAssembly assemblyName="System"  targetFramework=".NETFramework4.7.2"/>
+            <frameworkAssembly assemblyName="System.Xaml"  targetFramework=".NETFramework4.7.2"/>
+            <frameworkAssembly assemblyName="WindowsBase"  targetFramework=".NETFramework4.7.2"/>
+    </frameworkAssemblies>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2" />
+    </dependencies>
+  </metadata>
+  <files>
+     <file src="images\icon.png" target="images\icon.png" />
+  </files>
+</package>
