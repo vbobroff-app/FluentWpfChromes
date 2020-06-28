@@ -81,7 +81,7 @@ public partial class MainWindow : Window
     }
 }
 ```
-<h4>Object</h4>
+#### Object
 
 ```cs
 public class AсrylicChrome : ChromeBase → internal abstract class CromeBase : System.Windows.Freezable
@@ -110,7 +110,7 @@ public class AсrylicChrome : ChromeBase → internal abstract class CromeBase :
 
 # AeroGlassChrome
 
-<img src="./images/aeroglass_chrome.png" width="61%"/><br />
+![aeroglass](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/aeroglass_chrome.png)
 
 Add the code fragment to MainWindow.xaml
 ```xml
@@ -163,9 +163,9 @@ public partial class MainWindow : Window
  
     }
 }
-```xml
+```
 
-<h4>Object</h4>
+#### Object
 
 ```cs
 public class AсrylicChrome : ChromeBase → internal abstract class CromeBase : System.Windows.Freezable
@@ -174,7 +174,7 @@ Inherirs [ChromeBase properties](#properties)
 
 # TransparentChrome
 
-<img src="./images/transparent_chrome.png" width="61%"/><br />
+![transparent](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/transparent_chrome.png)
 
 Tunes opacity.
 
@@ -185,7 +185,7 @@ Add same code fragment
 </f:TransparentChrome.TransparentChrome>
 ```
 
-<h4>Object</h4>
+#### Object
 
 ```cs
 public class AеroGlassChrome : ChromeBase → internal abstract class CromeBase : System.Windows.Freezable
