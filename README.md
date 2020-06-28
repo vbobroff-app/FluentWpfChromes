@@ -1,6 +1,5 @@
-<h1>FluentWpfChromes</h1>
-
-<img src="./images/chromes.png" width="90%"/><br />
+# FluentWpfChromes
+![chromes](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/chromes.png)
 
 ## Content
 * **[AcrylicChrome](#acrylicchrome)**
