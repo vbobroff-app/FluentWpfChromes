@@ -36,7 +36,7 @@ In the MainWindow.xaml file, add the code fragment, which is the Attached Proper
 
 <img src="./images/acrylic_chrome.png" width="61%"/><br />
 
-Add the code fragmen to MainWindow.xaml
+Add the code fragment to MainWindow.xaml
 ```xml
 <Window x:Class="AcrylicChrome_Demo.MainWindow" x:Name="AcrylicWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
