@@ -8,7 +8,7 @@
 * **[AeroglassChrome](#aeroglasschrome)** - sets the blur effect for a custom WPF window.
 * **[TransparentChrome](#transparentchrome)** - tunes native transparency.
   
-## Install
+## How to Install
 *CLI  Nuget Pack command*
 ```
 Install-Package FluentWPFChromes
@@ -196,8 +196,8 @@ Inherirs [ChromeBase properties](#properties)
 ## Resources
 
 * [Error actylic move window issue][3] - mouse lagging GitHub discussion, 5 Apr 2019 · 32 комментария
-* [Adding Acrylic Blur to your Windows 10 (Redstone 4) desktop apps][2] - Rafael Rivera article, February 1, 2018
-* [Adding the "Aero Glass" blur to your Windows 10 apps][1] - Rafael Rivera article, July 8, 2015
+* [Adding Acrylic Blur to your Windows 10 (Redstone 4) desktop apps][2] - Rafael Rivera, February 1, 2018
+* [Adding the "Aero Glass" blur to your Windows 10 apps][1] - Rafael Rivera, July 8, 2015
 
 [3]: https://github.com/File-New-Project/EarTrumpet/issues/349
 [2]: https://withinrafael.com/2018/02/02/adding-acrylic-blur-to-your-windows-10-apps-redstone-4-desktop-apps/
