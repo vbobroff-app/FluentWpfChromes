@@ -16,7 +16,7 @@ Install-Package FluentWPFChromes
 https://nuget.org/packages/FluentWpfChromes
 
 ## Preparation
-In MainWindow.xaml file, add the FluentWpfChromes namespace, set WindowStyle = none, set Background brush the necessary transparency.
+The MainWindow.xaml file, add the FluentWpfChromes namespace, set WindowStyle = none, set Background brush the necessary transparency.
 ```
 xmlns:f="clr-namespace:FluentWpfChromes;assembly=FluentWpfChromes"
  
@@ -26,7 +26,7 @@ Background="#1946455F"
 
 ## Usage
 
-In the MainWindow.xaml file, add the code fragment, which is the Attached Property attribute with the corresponding chrome class AcrylicChrome, AeroGlassChrome or TransparentChrome. For the availability of other components during HitTest, it is necessary to specify the attached property IsHitTestVisibleInChrome = "True" in the componenet body tag.
+The MainWindow.xaml file, add the code fragment, which is the Attached Property attribute with the corresponding chrome class AcrylicChrome, AeroGlassChrome or TransparentChrome. For the availability of other components during HitTest, it is necessary to specify the attached property IsHitTestVisibleInChrome = "True" in the componenet body tag.
 
 # AcrylicChrome
 ![acrylic](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/acrylic_chrome.png)
