@@ -3,7 +3,7 @@
 ![chromes](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/chromes.png)
 
 ## Content
-* **[AcrylicChrome](#acrylicchrome)** - sets the acrylic effect for a custom WPF window according to the Flurnt Design concept. You can set an additional understratum color to shade the acrylic.
+* **[AcrylicChrome](#acrylicchrome)** - sets the acrylic effect for a custom WPF window according the Flurnt Design concept. You can set an additional understratum color to shade the acrylic.
   
 * **[AeroglassChrome](#aeroglasschrome)** - sets the blur effect for a custom WPF window.
 * **[TransparentChrome](#transparentchrome)** - tunes native transparency.
