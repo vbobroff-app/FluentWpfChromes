@@ -2,6 +2,14 @@
 # FluentWpfChromes
 ![chromes](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/chromes.png)
 
+# Introduction
+The easy way to apply Bloor, Acrylic and Transparent effect on Wpf Windows. You need only paste three lines like this
+```xml
+    <f:AcrylicChrome.AcrylicChrome>
+        <f:AcrylicChrome/>
+    </f:AcrylicChrome.AcrylicChrome>
+```
+
 ## Content
 * **[AcrylicChrome](#acrylicchrome)** - sets the acrylic effect for a custom WPF window according the Flurnt Design concept. You can set an additional understratum color to shade the acrylic.
   
