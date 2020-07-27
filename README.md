@@ -103,7 +103,7 @@ public class AсrylicChrome : ChromeBase → internal abstract class CromeBase :
 |IsBlurred|bool|Attached|Property|true|On (off) blur effect
 |ResizeBorderThickness|Thickness|DependencyProperty|Thickness(4,4,4,4)|Resizing border shift
 |CaptionHeight|double|DependencyProperty|22.0|Header area height to drag
-|AllowStartUpFrozen|bool|DependencyProperty|false|If false, in the case of a "frozen" state, it will create a new AcrylicChrome object, excluding "freezing". Useful for run from Style, when Freezable objects are delivered in the state IsFrosen = true.
+|AllowStartUpFrozen|bool|DependencyProperty|false|If false, in the case of a "frozen" state, it will create a new AcrylicChrome object, excluding "freezing". Useful for run from Style, when Freezable objects are delivered from the state IsFrosen = true.
 |UnderStratumColor|Color|DependencyProperty|Argb(1, 0, 0, 0)|Additional native GBR channel understratum color
 |RgbChannelProperty|Color|DependencyProperty|Argb(1, 0, 0, 0)|Additional native understratum color with RGB conversion
 |DependencyOpacity|byte|DependencyProperty|0|Native opacity
