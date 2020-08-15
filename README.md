@@ -3,7 +3,7 @@
 ![chromes](https://raw.githubusercontent.com/vbobroff-app/FluentWpfChromes/master/images/chromes.png)
 
 # About
-The easy way to apply Bloor, Acrylic or Transparent effect Wpf Windows. You only need paste three lines like this
+The easy way to apply Bloor, Acrylic or Transparent effect the Wpf Window. You only need paste three lines like this
 ```xml
     <f:AcrylicChrome.AcrylicChrome>
         <f:AcrylicChrome/>
