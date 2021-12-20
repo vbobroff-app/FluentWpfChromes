@@ -1,81 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+	<TargetFramework>netcoreapp3.1</TargetFramework>
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FA485F21-2AC2-4E3C-A54B-0554EE202148}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentWpfChromes</RootNamespace>
-    <AssemblyName>FluentWpfChromes</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="WindowsBase" />
+    <Compile Remove="Base\AcrylicInitialzer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Utilities\DependencyHelper.cs" />
-    <Compile Include="Initializers\AcrylicInitialzer.cs" />
-    <Compile Include="Base\InitializerBase.cs" />
-    <Compile Include="Base\ChromeBase.cs" />
-    <Compile Include="Initializers\ChromeInitializer.cs" />
-    <Compile Include="Core\WindowMessageHandler.cs" />
-    <Compile Include="Blurriers\AeroGlassBlurrier.cs" />
-    <Compile Include="Blurriers\VistaGlassBlurrier.cs" />
-    <Compile Include="Chromes\AcrylicChrome.cs" />
-    <Compile Include="Chromes\AeroGlassChrome.cs" />
-    <Compile Include="Core\IDelayed.cs" />
-    <Compile Include="Chromes\TransparentChrome.cs" />
-    <Compile Include="Core\Standard\Enums\AccentFlags.cs" />
-    <Compile Include="Core\Standard\Enums\AccentState.cs" />
-    <Compile Include="Core\Standard\Enums\DWMNCRP.cs" />
-    <Compile Include="Core\Standard\Enums\DWMWA.cs" />
-    <Compile Include="Core\Standard\Enums\GWL.cs" />
-    <Compile Include="Core\Standard\Enums\ResizeDirection.cs" />
-    <Compile Include="Core\Standard\Enums\UsingColors.cs" />
-    <Compile Include="Core\Standard\Enums\WindowCompositionAttribute.cs" />
-    <Compile Include="Core\Standard\Enums\WM.cs" />
-    <Compile Include="Core\Standard\Enums\WS.cs" />
-    <Compile Include="Core\Standard\Enums\WS_EX.cs" />
-    <Compile Include="Core\Standard\Enums\WVR.cs" />
-    <Compile Include="Core\Standard\NativeMethods.cs" />
-    <Compile Include="Core\Standard\Structures\AccentPolicy.cs" />
-    <Compile Include="Core\Standard\Structures\HT.cs" />
-    <Compile Include="Core\Standard\Structures\MARGINS.cs" />
-    <Compile Include="Core\Standard\Structures\POINT.cs" />
-    <Compile Include="Core\Standard\Structures\RECT.cs" />
-    <Compile Include="Core\Standard\Structures\SIZE.cs" />
-    <Compile Include="Core\Standard\Structures\WindowCompositionAttributeData.cs" />
-    <Compile Include="Core\Utilities\ColorFrom.cs" />
-    <Compile Include="Core\Utilities\CursorPosition.cs" />
-    <Compile Include="Core\Utilities\DpiHelper.cs" />
-    <Compile Include="Core\Utilities\MouseInput.cs" />
-    <Compile Include="Core\Utilities\Utility.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.261602">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
